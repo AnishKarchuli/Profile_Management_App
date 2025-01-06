@@ -1,0 +1,1 @@
+Profile Management App using Redux in Vanilla JS
