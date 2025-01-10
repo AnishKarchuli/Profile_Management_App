@@ -4,20 +4,17 @@ import { addProfile, removeProfile, calculateAverageAge } from "./actions";
 
 const store = createStore(profileReducer);
 
-// Initial profiles
 const profiles = [
   { id: 1, name: "Alice", age: 25 },
   { id: 2, name: "Bob", age: 30 },
   { id: 3, name: "Charlie", age: 35 },
 ];
 
-// Add initial profiles
 for (let i = 0; i < profiles.length; i++) {
   store.dispatch(addProfile(profiles[i]));
 }
 store.dispatch(calculateAverageAge());
 
-// Rendering functions
 const renderProfiles = () => {
   const state = store.getState();
   const profilesList = document.getElementById("profiles-list");
@@ -45,7 +42,6 @@ function updateAverageAge() {
   }
 }
 
-// Event handlers
 function handleAddProfile(event) {
   event.preventDefault();
 
